@@ -29,13 +29,6 @@ export default function RootLayout({
           socialButtonsVariant: "iconButton",
           logoImageUrl: "/ineza.png",
         },
-        variables: {
-          colorText: "#fff",
-          colorPrimary: "#0E78F9",
-          colorBackground: "#1C1F2E",
-          colorInputBackground: "#252A41",
-          colorInputText: "#fff",
-        },
       }}
     >
       <html lang="en">
