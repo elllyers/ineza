@@ -3,7 +3,7 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between bg-[#444444]/20">
+    <div className="flex items-center justify-between bg-[#444444]/20 h-16">
       <div className="py-2 px-2 flex items-center justify-end">
         <img src="/ineza.png" alt="inezaLogo" width={80} height={80} />
       </div>
