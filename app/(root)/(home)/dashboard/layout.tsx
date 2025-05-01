@@ -1,5 +1,7 @@
-const dashboardLayout = ({ children }: { children: React.ReactNode }) => {
-  return <div>{children}</div>;
-};
-
-export default dashboardLayout;
+export default function dashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <main>{children}</main>;
+}
