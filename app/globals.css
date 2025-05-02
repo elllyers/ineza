@@ -121,10 +121,28 @@
   }
 }
 
+.cl-cardBox {
+  font-family: var(--font-geist, "Geist"), sans-serif;
+}
+
 .cl-internal-1dauvpw,
 .cl-internal-1hp5nqm {
   content-visibility: hidden;
-  padding: 0rem;
+  padding: 0px;
+}
+.cl-navbarButton {
+  color: white;
+}
+.cl-internal-w46wub {
+  color: lightsteelblue;
+}
+.cl-avatarImageActionsUpload,
+.cl-buttonm,
+.cl-headerTitle {
+  color: lightsteelblue;
+}
+.cl-internal-w46wub:hover {
+  color: lightsteelblue;
 }
 .cl-socialButtonsIconButton {
   display: flex;
@@ -133,7 +151,31 @@
   width: 100%;
   height: 100%;
   border-radius: var(--radius);
-  background-color: #03052344;
+  background-color: #696b7544;
   color: var(--color-foreground);
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.cl-socialButtonsIconButton:hover {
+  outline: 2px solid #ffffff;
+  background-color: #696b7544;
+  opacity: 0.8;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
+}
+.cl-formFieldInputShowPasswordIcon {
+  filter: invert(1);
+}
+.cl-internal-1odp14a {
+  background: #0e70f9;
+  opacity: 0.9;
+}
+.cl-internal-1odp14a:hover {
+  background-color: #0e78f9;
+  opacity: 0.8;
+}
+.cl-otpCodeFieldInput {
+  @apply bg-black-1 ring-1 focus:ring-2 ring-slate-700;
+}
+.cl-badge {
+  @apply text-slate-300;
 }

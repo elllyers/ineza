@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "./ui/button";
 
 const Hero = () => {
@@ -7,9 +8,9 @@ const Hero = () => {
         <div className="absolute bottom-0 left-[-10%] h-[300px] w-[300px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
         <div className="absolute bottom-1/2 right-[-10%] h-[300px] w-[300px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
       </div>
-      <div className="flex flex-col items-center justify-center h-full">
+      <div className="absolute z-10 flex flex-col items-center justify-center h-full w-full">
         <div className="text-center px-4 py-6 my-16">
-          <p className="text-4xl md:text-6xl text-white font-extrabold tracking-wider leading-9">
+          <p className="text-4xl md:text-6xl text-white/90 font-bold tracking-wider leading-9">
             Seamless <span className="text-[#8648C8]/64">Services</span>, Just
             for You
           </p>
@@ -24,15 +25,20 @@ const Hero = () => {
         </div>
 
         <div className="flex gap-3 mt-8 p-1 items-center justify-center w-[209px] h-[38px]">
-          <div>
-            <Button variant="default" className="text-white h-9 cursor-pointer">
-              Get Started
-            </Button>
+          <div className="cursor-pointer">
+            <Link href="/services">
+              <Button
+                variant="default"
+                className="text-white h-9 cursor-pointer"
+              >
+                Get Started
+              </Button>
+            </Link>
           </div>
-          <div>
+          <div className="hover:cursor-pointer">
             <Button
               variant="outline"
-              className="text-white h-9 outline-2 cursor-pointer"
+              className="text-white h-9 outline-2 hover:cursor-pointer"
             >
               learn more
             </Button>
