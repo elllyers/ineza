@@ -32,7 +32,7 @@ ineza/
 1. Clone the repository:
 
 ```bash
-git clone <https://github.com/elllyers/ineza.git>
+git clone https://github.com/elllyers/ineza.git
 cd ineza
 ```
 
