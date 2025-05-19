@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 const Navbar = async () => {
   const user = await currentUser();
   return (
-    <div className="top-0 flex items-center justify-between bg-[#444444]/20 h-12 py-2 px-4">
+    <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between bg-gray-950/80 backdrop-blur-sm border-b border-gray-800 h-12 py-2 px-4">
       <Link className="flex items-center justify-start" href={"/"}>
         <img src="/ineza.png" alt="inezaLogo" width={80} height={80} />
       </Link>
