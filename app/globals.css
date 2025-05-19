@@ -121,6 +121,8 @@
   }
 }
 
+/* Clerk Components styles */
+
 .cl-cardBox {
   font-family: var(--font-geist, "Geist"), sans-serif;
 }
@@ -178,4 +180,20 @@
 }
 .cl-badge {
   @apply text-slate-300;
+}
+.cl-modalBackdrop {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.cl-modalBackdrop::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+/* styling dashboard */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }
