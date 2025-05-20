@@ -1,17 +1,9 @@
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
-import { Geist, Geist_Mono } from "next/font/google";
+
+import { GeistSans } from "geist/font/sans";
+
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "InezaPapetrie",
@@ -28,7 +20,7 @@ export default function RootLayout({
       appearance={{
         layout: {
           socialButtonsVariant: "iconButton",
-          logoImageUrl: "/ineza.png",
+          logoImageUrl: "/logo-with-text.svg",
           logoLinkUrl: "/",
         },
         variables: {
@@ -40,9 +32,7 @@ export default function RootLayout({
       }}
     >
       <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black-1`}
-        >
+        <body className={`${GeistSans.className} antialiased bg-black-1`}>
           {children}
         </body>
       </html>

@@ -3,7 +3,6 @@ import { Stats } from "@/components/dashboard/Stats";
 import RevenueChart from "@/components/dashboard/RevenueChart";
 import CustomerAnalytics from "@/components/dashboard/CustomerAnalytics";
 import {
-  CalendarIcon,
   Download,
   RefreshCcw,
   TrendingUp,
@@ -13,7 +12,7 @@ import {
   Settings,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
+
 import { useState } from "react";
 
 const Page = () => {
