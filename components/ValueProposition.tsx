@@ -1,12 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
-
 export default function ValueProposition() {
   return (
-    <section className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 py-20">
+    <section className="min-h-screen  py-20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text */}
@@ -26,8 +24,8 @@ export default function ValueProposition() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               className="text-xl text-slate-400"
             >
-              From seamless banking to instant document services, we're making
-              digital transformation accessible to everyone.
+              From seamless banking to instant document services, we&apos;re
+              making digital transformation accessible to everyone.
             </motion.p>
 
             <motion.div

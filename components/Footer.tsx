@@ -15,6 +15,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { Github, Twitter, Linkedin, Facebook, Instagram } from "lucide-react";
+import Image from "next/image";
 
 const formSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -91,7 +92,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="relative mt-16 bg-gradient-to-b from-slate-950 to-black text-slate-300">
+    <footer className="relative mt-16 bg-gradient-to-b from-slate-950 to-black-1 text-slate-300">
       {/* Top Wave Decoration */}
       <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-slate-950" />
 
@@ -100,10 +101,13 @@ export default function Footer() {
           {/* Logo and Newsletter Section */}
           <div className="lg:col-span-5 space-y-8">
             <Link href="/" className="flex items-center">
-              <img
+              <Image
+                width={32}
+                height={32}
                 src="/logo-with-text.svg"
                 alt="Ineza"
                 className="h-10 w-auto"
+                priority
               />
             </Link>
             <div className="max-w-md space-y-4">

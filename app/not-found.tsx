@@ -108,8 +108,8 @@ export default function NotFound() {
             Houston, We Have a Problem!
           </h1>
           <p className="text-slate-300 text-lg">
-            The page you're looking for has drifted into deep space. Let's get
-            you back to familiar territory.
+            The page you&apos;re looking for has drifted into deep space.
+            Let&apos;s get you back to familiar territory.
           </p>
         </div>
 

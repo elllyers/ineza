@@ -79,7 +79,7 @@ const item = {
 
 export default function FeaturesGrid() {
   return (
-    <section className="py-20 bg-slate-900">
+    <section className="py-20 bg-slate-900/10">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -101,7 +101,7 @@ export default function FeaturesGrid() {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <motion.div key={feature.title} variants={item}>
               <Card className="bg-white/5 border-slate-800/50 backdrop-blur-lg hover:bg-white/10 transition-colors">
                 <CardHeader>

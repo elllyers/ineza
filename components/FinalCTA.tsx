@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, Activity, Timer, PhoneCall } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { AnimatedStats } from "@/components/AnimatedStats";
 
 const floatingAnimation = {
@@ -24,18 +24,6 @@ const pulseAnimation = {
     scale: [1, 1.05, 1],
     transition: {
       duration: 2,
-      repeat: Infinity,
-      ease: "easeInOut",
-    },
-  },
-};
-
-const glowAnimation = {
-  initial: { opacity: 0.5 },
-  animate: {
-    opacity: [0.5, 1, 0.5],
-    transition: {
-      duration: 3,
       repeat: Infinity,
       ease: "easeInOut",
     },
@@ -94,7 +82,7 @@ export default function FinalCTA() {
   return (
     <section className="relative overflow-hidden">
       {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 opacity-10" />
 
       {/* Floating Elements */}
       <motion.div
@@ -130,7 +118,7 @@ export default function FinalCTA() {
             </h2>
             <p className="text-lg text-slate-300">
               Join thousands of satisfied customers who have already made the
-              switch to Ineza's digital services.
+              switch to Ineza&apos;s digital services.
             </p>
           </motion.div>
           <motion.div
@@ -173,7 +161,7 @@ export default function FinalCTA() {
       </div>
 
       {/* Bottom Wave Effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-slate-900" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-slate-900/10" />
     </section>
   );
 }
