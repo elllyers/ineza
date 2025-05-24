@@ -1,137 +1,127 @@
-# Ineza - A Modern Authentication-Protected Service Platform
+# Ineza - Your Digital Services Hub
 
-Ineza is a Next.js-based web application that provides seamless access to various services including banking, document processing, and writing services. Built with TypeScript and protected by Clerk authentication, it offers a secure and user-friendly interface for accessing digital services.
+## Overview
+Ineza is a comprehensive digital services platform that provides seamless access to various essential services including banking operations, government documentation (Irembo), and professional writing services. Built with Next.js 13+ and secured by Clerk authentication, it offers a modern, secure, and user-friendly interface for accessing and managing digital services.
 
-The platform features a modern, responsive design with a dark theme and implements route protection for sensitive areas. It uses React Server Components for optimal performance and includes custom UI components built with Tailwind CSS. The application provides a seamless authentication flow and protected dashboard access for registered users.
+## Key Features
 
-## Repository Structure
+### Service Categories
+- **Banking Services**: Secure transactions, account management, and financial operations
+- **Irembo Services**: Government documentation, permits, and certificates
+- **Writing Services**: Professional document writing and editing
 
+### Platform Capabilities
+- Dynamic service forms with custom fields
+- Secure payment processing
+- Real-time service status tracking
+- Admin dashboard for service management
+- User-friendly interface with dark theme
+- Responsive design for all devices
+
+## Documentation
+- [How Services Work](app/(root)/(home)/(services)/services/how-services-work.md) - Detailed guide on using our services
+- [Technical Specification](app/(root)/(home)/(services)/services/spec.md) - Technical details for developers
+
+## Project Structure
 ```
 ineza/
-├── app/                      # Next.js 13+ app directory structure
-│   ├── (auth)/              # Authentication-related pages (sign-in, sign-up)
-│   └── (root)/              # Main application pages and layouts
-├── components/              # Reusable React components
-│   ├── ui/                  # Base UI components (buttons, calendar)
-│   ├── Hero.tsx            # Landing page hero section
-│   └── Navbar.tsx          # Application navigation bar
-├── lib/                    # Utility functions and shared code
-└── middleware.ts           # Route protection and authentication middleware
+├── app/                      # Next.js 13+ app directory
+│   ├── (auth)/              # Authentication pages
+│   └── (root)/              # Main application
+│       └── (home)/
+│           └── (services)/  # Services implementation
+├── components/              # Reusable components
+│   ├── ui/                 # Base UI components
+│   └── dashboard/          # Admin dashboard components
+├── lib/                    # Utilities and helpers
+└── public/                 # Static assets
 ```
 
-## Usage Instructions
+## Technology Stack
+- **Framework**: Next.js 13+ with App Router
+- **Authentication**: Clerk.js
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+- **State Management**: React Hooks
+- **Payment Processing**: Integrated payment gateways
+- **Form Handling**: Dynamic form generation
+
+## Getting Started
 
 ### Prerequisites
-
 - Node.js 16.x or later
-- npm or yarn package manager
-- A Clerk.dev account for authentication
+- npm or yarn
+- Clerk.dev account
+- Environment variables setup
 
 ### Installation
 
 1. Clone the repository:
-
 ```bash
 git clone https://github.com/elllyers/ineza.git
 cd ineza
 ```
 
 2. Install dependencies:
-
 ```bash
 npm install
 # or
 yarn install
 ```
 
-3. Set up environment variables:
-
+3. Configure environment variables:
 ```bash
-# Create .env.local file
-touch .env.local
-
-# Add required Clerk environment variables
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
-CLERK_SECRET_KEY=your_secret_key
+# Create .env.local with:
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_key
+CLERK_SECRET_KEY=your_secret
 ```
 
-### Quick Start
-
-1. Start the development server:
-
+4. Start development server:
 ```bash
 npm run dev
 # or
 yarn dev
 ```
 
-2. Open your browser and navigate to `http://localhost:3000`
+## User Roles
 
-### More Detailed Examples
+### Client Users
+- Browse available services
+- Submit service requests
+- Track request status
+- Make payments
+- View service history
 
-1. Accessing protected routes:
+### Administrators
+- Manage services
+- Process requests
+- View analytics
+- Generate reports
+- Configure pricing
 
-```typescript
-// Protected routes are defined in middleware.ts
-const protectedRoutes = ["/dashboard", "/services", "/services/*"];
-```
+## Security Features
+- Clerk authentication
+- Protected routes
+- Secure payment processing
+- Data encryption
+- Role-based access control
 
-2. Using the UI components:
+## Contributing
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
-```typescript
-import { Button } from "@/components/ui/button";
+## Support
+For support and queries:
+- Check the [How Services Work](app/(root)/(home)/(services)/services/how-services-work.md) guide
+- Contact our support team
+- Visit our help center
 
-// Example usage
-<Button variant="default">Click me</Button>;
-```
+## License
+This project is proprietary software. All rights reserved.
 
-### Troubleshooting
+---
 
-Common issues and solutions:
-
-1. Authentication Issues
-
-- Error: "Unable to access protected route"
-  - Ensure you're logged in
-  - Check if Clerk environment variables are properly set
-  - Clear browser cookies and try again
-
-2. Build Errors
-
-- Error: "Module not found"
-  - Run `npm install` to ensure all dependencies are installed
-  - Check import paths match the repository structure
-
-## Data Flow
-
-The application follows a simple data flow pattern where authentication state manages access to protected routes and services.
-
-```ascii
-[Client] -> [Clerk Auth] -> [Middleware] -> [Protected Routes]
-     |           |              |                  |
-     └─────────>[Public Routes]─┴──────────────────┘
-```
-
-Key component interactions:
-
-1. Clerk.js handles user authentication and session management
-2. Middleware intercepts requests to protected routes
-3. Protected routes require valid authentication
-4. Public routes are accessible without authentication
-5. UI components adapt based on authentication state
-
-## Infrastructure
-
-The application uses the following key infrastructure components:
-
-Authentication:
-
-- Clerk.js for user authentication and management
-- Protected route middleware for security
-
-Frontend:
-
-- Next.js 13+ for server-side rendering and routing
-- React Server Components for optimal performance
-- Tailwind CSS for styling
-- TypeScript for type safety
+Built with ❤️ by Ineza Team

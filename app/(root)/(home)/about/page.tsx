@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-black text-gray-200 py-16 px-4">
+    <div className="min-h-screen text-gray-200 py-16 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Hero Section */}
         <section className="mb-16">

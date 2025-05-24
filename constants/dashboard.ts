@@ -7,6 +7,8 @@ import {
   PieChart,
   Activity,
   CreditCard,
+  LayersIcon,
+  InboxIcon,
 } from "lucide-react";
 
 export type MenuItem = {
@@ -20,6 +22,16 @@ export const DASHBOARD_MENU_ITEMS: MenuItem[] = [
     title: "Overview",
     icon: PieChart,
     href: "/dashboard",
+  },
+  {
+    title: "Services",
+    icon: LayersIcon,
+    href: "/dashboard/services",
+  },
+  {
+    title: "Requests",
+    icon: InboxIcon,
+    href: "/dashboard/requests",
   },
   {
     title: "Revenue Analytics",
