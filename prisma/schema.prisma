@@ -23,9 +23,9 @@ model Service {
   type           ServiceType
   createdAt      DateTime         @default(now())
   updatedAt      DateTime         @updatedAt
-  formFields     Json // Dynamic form fields specific to the service
+  formFields     Json 
   requests       ServiceRequest[]
-  paymentMethods PaymentMethod[] // Available payment methods for this service
+  paymentMethods PaymentMethod[] 
 
   @@map("services")
 }
@@ -35,7 +35,7 @@ model ServiceRequest {
   id            String            @id @default(uuid())
   serviceId     String
   userId        String
-  formData      Json // Dynamic form data based on service requirements
+  formData      Json 
   status        RequestStatus     @default(PENDING)
   paymentMethod PaymentMethodType
   paymentStatus PaymentStatus     @default(PENDING)
@@ -53,7 +53,7 @@ model PaymentMethod {
   id        String            @id @default(uuid())
   type      PaymentMethodType
   serviceId String
-  name      String // Display name (e.g. "MTN Money")
+  name      String
   enabled   Boolean           @default(true)
 
   service Service @relation(fields: [serviceId], references: [id])

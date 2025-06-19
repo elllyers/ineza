@@ -13,7 +13,7 @@ import {
 
 export type MenuItem = {
   title: string;
-  icon: any; // Using any for Lucide icons type
+  icon: any;
   href: string;
 };
 
